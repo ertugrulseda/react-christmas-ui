@@ -1,2 +1,1 @@
-export * from './components/myButton'
-export * from './components/myInput'
+export * from './components'

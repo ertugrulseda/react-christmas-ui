@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, "build"),// build isminde bir klasör oluşturup bundle alıyor
     globalObject: 'this',
     library: {
-      name: 'seda-react-lib',
+      name: 'react-christmas-ui',
       type: 'umd',
     }
   },
