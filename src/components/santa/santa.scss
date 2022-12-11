@@ -1,0 +1,34 @@
+.santa {
+    &:hover {
+       .left-eye{
+        rx: 33px;
+        ry: 3px;
+       } 
+       .right-eye{
+        rx: 33px;
+        ry: 3px;
+       } 
+    }
+}
+
+.left-eye{
+    fill: black;
+    transition: rx 0.3s, ry 0.3s;
+    
+}
+
+.right-eye{
+    fill: black;
+    transition: rx 0.3s, ry 0.3s;
+}
+
+.left-eye-closed{
+    rx: 33px;
+    ry: 3px; 
+}
+
+.right-eye-closed{
+    rx: 33px;
+    ry: 3px; 
+}
+
