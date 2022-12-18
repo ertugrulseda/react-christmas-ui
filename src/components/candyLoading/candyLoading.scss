@@ -1,0 +1,42 @@
+.candy {
+	&.container {
+        height:100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        border-radius: 20px;
+        background: white;
+        box-shadow: 0 0 12px 1px white;
+        position: relative;
+    }
+}
+
+.candy-line {
+    min-width: 30px;
+    height: 100%;
+    background-color: #af0404;
+    margin-right: 30px;
+    animation: linemove 1s infinite;
+    animation-timing-function: linear;
+    left: -60px;
+}
+
+.candy-shine {
+    height: 3px;
+    background-color: #fff;
+    opacity: 0.3;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    right:0px;
+}
+
+@keyframes linemove {
+	from {
+		transform: translateX(-30px) skew(-30deg);
+	}
+	to {
+		transform: translateX(30px) skew(-30deg);
+	}
+}
