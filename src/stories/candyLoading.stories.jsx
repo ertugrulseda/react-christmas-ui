@@ -7,23 +7,19 @@ export default {
 	title: 'Candy Loading',
 	component: CandyLoading,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-	argTypes: {
-		// openEyes: {
-		//   control: 'boolean',
-		// },
-	}
+	argTypes: { candycolor: { control: { type: 'color'} } }
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => {
-  const [loading, setLoading] = useState(false);
+	const [ loading, setLoading ] = useState(false);
 
-  const handleClick = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);  
-    }, 2000);
-  }
+	const handleClick = () => {
+		setLoading(true);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	};
 
 	return (
 		<div
@@ -64,17 +60,17 @@ const Template = (args) => {
 				<CandyLoading {...args} />
 			</div>
 			<button
-        onClick={handleClick}
+				onClick={handleClick}
 				style={{
 					height: 60,
 					width: 200,
 					marginBottom: 20,
-          padding:0,
-          margin:0,
-          borderRadius:20
+					padding: 0,
+					margin: 0,
+					borderRadius: 20
 				}}
 			>
-				{ loading ? <CandyLoading {...args} /> : <span>Click Me</span>}
+				{loading ? <CandyLoading {...args} /> : <span>Click Me</span>}
 			</button>
 		</div>
 	);
